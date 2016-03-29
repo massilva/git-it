@@ -1,3 +1,4 @@
+# 
 :wave: Hi! I've been working on a desktop version of Git-it—same challenges, same result, just as its own app rather than something that runs in your terminal. You could give it a try if you'd like, download the one for your operating system here: [github.com/jlord/git-it-electron/releases](https://github.com/jlord/git-it-electron/releases). Eventually it will replace this terminal based version of Git-it :pizza:
 
 # Git-it
@@ -78,3 +79,34 @@ $ git-it
 **Command line, terminal, bash** all basically mean the same thing: the MS-DOS, Doogie Howser looking screen full of words and numbers. It's awesomely powerful and allows you to control your computer with text commands.
 
 You can do a lot of things from your terminal like delete, rename, copy or create files and folders; run scripts and send things back and forth between servers (like the ones storing things on GitHub.com) and your computer (also a server!).
+
+This folder contains the content and scripts for building the HTML guide component to Git-it.
+
+_First, make sure once you've cloned `git-it` that you run `npm-install` to fetch the modules you'll need._
+
+### To Edit Challenge Content
+
+Edit `.html` files in /raw-content.
+
+### To Rebuild all pages
+
+In `/git-it` in terminal, run `npm run build`.
+
+#### English only
+
+In `/git-it` in terminal, run `npm run build-english`.
+
+#### Traditional Chinese only
+
+In `/git-it` in terminal, run `npm run build-zhtw`.
+
+### To Edit Styles and Layouts
+
+The HTML for the header and footer are in `/partials` and the assests (css, js and images) are in `/assets`. The layout templated used for the pages is `layout.hbs`.
+
+### About the Wayz
+
+The `buildpages.js` contains all the scripting for creating the sites. It pulls the body content from `/raw-content`, the header and footer content from `/partials` and the layout template form `layout.hbs`.
+
+The `index.html` page is currently built bespoke, by hand, such artisan. Wow.
+
